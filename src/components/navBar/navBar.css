@@ -35,3 +35,10 @@ body {
 #mk a {
   color: rgb(241, 183, 3);
 }
+
+#icono {
+  background-color: cadetblue;
+  float: right;
+  display: block;
+  padding: 15px;
+}
