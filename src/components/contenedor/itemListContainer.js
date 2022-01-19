@@ -7,7 +7,7 @@ import { getData } from '../Services/getData'
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     useEffect (() => {
-        getData.then((res) => console.log("la respuesta de la promesa", res))
+        getData.then((res) => setProducts(res));
     });
 
     return (
