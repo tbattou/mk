@@ -1,4 +1,4 @@
-const data = [
+const items = [
     {
     id:1,
     title: "Remera Subzero",
@@ -30,15 +30,9 @@ const data = [
     },
 ]
 
-export const getData = new Promise((resolve) => {
-setTimeout(() => {
-    resolve(data);
-}, 2000);
-});
-
 export const getItem = new Promise((resolve) => {
     setTimeout(() => {
-        resolve(data);
+        resolve(items);
     }, 2000);
     });
     
