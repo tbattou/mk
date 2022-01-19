@@ -7,18 +7,10 @@ import { Route, Router, Switch } from 'react-router-dom';
 function App() {
   return (
 
-    <Router>
+      <div>
       <NavBar />
       <ItemListContainer/>
-    <Switch>
-      <Route exact path= '/'>
-        <Home />
-      </Route>
-
-
-    </Switch>
-
-    </Router>
+      </div>
   );
 }
 

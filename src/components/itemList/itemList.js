@@ -1,6 +1,6 @@
-import Item from "../item/item";
+import { Item } from "../item/item";
 
-const ItemList = ({ products }) => {
+export const ItemList = ({ products }) => {
     return (
     <div>
         {
@@ -10,4 +10,3 @@ const ItemList = ({ products }) => {
         }
     </div>)
 }
-export default ItemList;
