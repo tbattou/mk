@@ -15,7 +15,7 @@ export const ItemDetailContainer = () => {
     
       return (
             <section className="products">
-              <h1 className="titleSection">📦 Products</h1>
+              <h1 className="titleSection">📦 Productos detallados</h1>
               {products ? (
                 products.map((product) => <ItemDetail {...product} />)
               ) : (
