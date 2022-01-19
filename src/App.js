@@ -1,8 +1,7 @@
 import './App.css';
 import { NavBar } from './components/navBar/navBar' 
 import { ItemListContainer } from './components/contenedor/itemListContainer' 
-import { Home } from './components/pages/home/home' 
-import { Route, Router, Switch } from 'react-router-dom';
+import { ItemDetailContainer } from './components/itemDetailContainer/itemDetailContainer';
 
 function App() {
   return (
@@ -10,6 +9,7 @@ function App() {
       <div>
       <NavBar />
       <ItemListContainer/>
+      <ItemDetailContainer/>
       </div>
   );
 }

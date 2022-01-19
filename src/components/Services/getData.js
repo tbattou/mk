@@ -2,6 +2,7 @@ const data = [
     {
     id:1,
     title: "Remera Subzero",
+    img: "",
     desc: "primer articulo",
     categoria: "Remera",
     price: "1000",
@@ -11,6 +12,7 @@ const data = [
     {
     id:2,
     title: "Remera Scorpion",
+    img: "",
     desc: "seundo articulo",
     categoria: "Remera",
     price: "1500",
@@ -20,6 +22,7 @@ const data = [
     {
     id:3,
     title: "Buzo Subzero",
+    img: "",
     desc: "tercer articulo",
     categoria: "Buzo",
     price: "3000",
