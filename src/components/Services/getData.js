@@ -2,7 +2,7 @@ const data = [
     {
     id:1,
     title: "Remera Subzero",
-    img: "",
+    image: "",
     desc: "primer articulo",
     categoria: "Remera",
     price: "1000",
@@ -12,8 +12,8 @@ const data = [
     {
     id:2,
     title: "Remera Scorpion",
-    img: "",
-    desc: "seundo articulo",
+    image: "",
+    desc: "segundo articulo",
     categoria: "Remera",
     price: "1500",
     stock: "6",
@@ -22,7 +22,7 @@ const data = [
     {
     id:3,
     title: "Buzo Subzero",
-    img: "",
+    image: "",
     desc: "tercer articulo",
     categoria: "Buzo",
     price: "3000",
@@ -35,10 +35,3 @@ setTimeout(() => {
     resolve(data);
 }, 2000);
 });
-
-export const getItem = new Promise((resolve) => {
-    setTimeout(() => {
-        resolve(data);
-    }, 2000);
-    });
-    
