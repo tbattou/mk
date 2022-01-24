@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { ItemCount } from '../itemCount/itemCount'
 import { ItemList } from '../itemList/itemList';
 import { getData } from '../Services/getData'
 
