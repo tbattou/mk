@@ -2,7 +2,7 @@ const data = [
     {
     id:1,
     title: "Remera Subzero",
-    image: "https://images-na.ssl-images-amazon.com/images/I/616VM20%2BAzL.__AC_SY300_SX300_QL70_ML2_.jpg",
+    image: "./image/fatality.jpg",
     desc: "primer articulo",
     categoria: "Remera",
     price: "1000",
