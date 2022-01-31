@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import "./itemCount.css";
 import { Link } from "react-router-dom";
+import { CartContext } from "../cartContext/cartContext";
 
 export const ItemCount = ({ stock, initial }) => {
+    const {addItem} = useContext(CartContext)
     const [count, setCount] = useState(initial);
     const onDecrease = () => {
         const newValue = count - 1;
