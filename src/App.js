@@ -4,6 +4,8 @@ import { ItemListContainer } from './components/contenedor/itemListContainer'
 import { ItemDetailContainer } from './components/itemDetailContainer/itemDetailContainer';
 import { BrowserRouter, Switch, Redirect, Route, Link } from "react-router-dom";
 import { Cart } from './components/cart/cart';
+import { CartProvider } from './components/cartContext/cartContext';
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <BrowserRouter>
         <NavBar />
         <Switch>
+          <CartProvider>
           <Route exact path="/" component={ItemListContainer}></Route>
           <Route
             exact
@@ -20,6 +23,7 @@ function App() {
           ></Route>
           <Route path="/cart" component={Cart}></Route>
           <Redirect to="/" />
+          </CartProvider>
         </Switch>
         <footer>mortalKompra S.A. TM</footer>
       </BrowserRouter>

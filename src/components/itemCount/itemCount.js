@@ -31,7 +31,7 @@ export const ItemCount = ({ stock, initial }) => {
       <h3> {count} </h3>
       <button onClick={() => onIncrease()}> + </button>
       <Link to={"/cart"}>
-      <button onClick={onAdd} >
+      <button onClick={() => addItem()} >
         Agregar al Carrito
       </button>
       </Link>
