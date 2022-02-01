@@ -3,7 +3,7 @@ import "./itemCount.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../cartContext/cartContext";
 
-export const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ stock, initial, title, image, price }) => {
     const {addItem} = useContext(CartContext)
     const [count, setCount] = useState(initial);
     const onDecrease = () => {
@@ -19,11 +19,6 @@ export const ItemCount = ({ stock, initial }) => {
         }
       };
     
-      const onAdd = () => {
-        const message = `Agregaste ${count} producto`;
-        count === 1 ? alert(message) : alert(`${message}s`);
-      };
-    
     
     return (
     <div>
@@ -33,7 +28,7 @@ export const ItemCount = ({ stock, initial }) => {
       <h3> {count} </h3>
       <button onClick={() => onIncrease()}> + </button>
       <Link to={"/cart"}>
-      <button onClick={() => addItem()} >
+      <button onClick={() => addItem({count, title, image, price})} >
         Agregar al Carrito
       </button>
       </Link>

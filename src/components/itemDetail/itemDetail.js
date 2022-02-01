@@ -19,7 +19,7 @@ export const ItemDetail = ({
       </span>
       <p className="description">{desc}</p>
       <p className="category">Tipo: {categoria}</p>
-      <ItemCount stock={stock} initial={1} />
+      <ItemCount stock={stock} initial={1} title={title} image={image} price={price}/>
     </div>
   );
 };
