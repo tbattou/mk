@@ -3,7 +3,8 @@ import "./itemCount.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../cartContext/cartContext";
 
-export const ItemCount = ({ stock, initial, title, image, price }) => {
+export const ItemCount = ({item, initial,}) => {
+
     const {addItem} = useContext(CartContext)
     const [count, setCount] = useState(initial);
     const onDecrease = () => {
@@ -14,7 +15,7 @@ export const ItemCount = ({ stock, initial, title, image, price }) => {
       };
       const onIncrease = () => {
         const newValue = count + 1;
-        if (newValue <= stock) {
+        if (newValue <= item.stock) {
           setCount(newValue);
         }
       };
@@ -28,7 +29,7 @@ export const ItemCount = ({ stock, initial, title, image, price }) => {
       <h3> {count} </h3>
       <button onClick={() => onIncrease()}> + </button>
       <Link to={"/cart"}>
-      <button onClick={() => addItem({count, title, image, price})} >
+      <button onClick={() => addItem({item, count, })} >
         Agregar al Carrito
       </button>
       </Link>

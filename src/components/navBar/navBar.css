@@ -42,3 +42,11 @@ body {
   display: block;
   padding: 15px;
 }
+
+.contador {
+  color: white;
+  float: right;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}

@@ -12,7 +12,9 @@ function App() {
 
       <div>
         <BrowserRouter>
+        <CartProvider>
         <NavBar />
+        </CartProvider>
         <Switch>
           <CartProvider>
           <Route exact path="/" component={ItemListContainer}></Route>
