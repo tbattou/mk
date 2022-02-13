@@ -29,6 +29,9 @@ export const Cart = () => {
             <Link to="/">
             <button onClick={checkoutItems}>Finalizar Compra</button>
             </Link>
+            <Link to="/">
+            <button>Seguir comprando</button>
+            </Link>
             
         </div>
     );

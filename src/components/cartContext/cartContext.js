@@ -49,7 +49,7 @@ export const CartProvider = ({ children }) => {
     const removeItem = ({product}) => {
       const copiaProducto = items.filter(element => element.id !== product.id);
       setItems(copiaProducto);
-      setPrecioTotal(precioTotal - product.price);
+      setPrecioTotal(precioTotal - (product.price * product.count));
       setCantidadTotal(cantidadTotal - product.count);
     };
 

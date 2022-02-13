@@ -6,7 +6,7 @@ import { CartContext } from "../cartContext/cartContext";
 
 
 export const NavBar = () => {
-    const {cantidadTotal, } = useContext(CartContext)
+    const {cantidadTotal} = useContext(CartContext)
     return (
         <nav className="menu">
             <ul>
@@ -17,7 +17,7 @@ export const NavBar = () => {
                 <li id='mk'><a href=''>mortalKompra</a></li>
                 </NavLink>
                 <li className="contador">{cantidadTotal}</li>
-                <NavLink exact to="/Cart">
+                <NavLink to={cantidadTotal === 0 ? "/" : "/Cart"}>
                 <li id='icono'><CartWidget /></li>
                 </NavLink>
             </ul>
