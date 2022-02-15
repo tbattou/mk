@@ -2,7 +2,6 @@ import '../itemDetail/itemDetail.css';
 import { ItemCount } from '../itemCount/itemCount';
 
 export const ItemDetail = ({item}) => {
-  console.log(item)
   return (
     <div className="product">
       <h2 className="title">{item.title}</h2>

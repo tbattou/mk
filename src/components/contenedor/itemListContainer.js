@@ -1,13 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { ItemList } from '../itemList/itemList';
-import { getData } from '../Services/getData'
+import { collection, doc, getDocs} from 'firebase/firestore';
+import { db } from '../../firebase/firebase';
+
+
 
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     useEffect (() => {
-        getData.then((res) => setProducts(res));
-    });
+        const getProducts = async () => {
+            const querySnapshot = await getDocs(collection(db, 'productos'))
+            const products = querySnapshot.docs.map((doc) => {
+                return{
+                    ...doc.data(),
+                }
+            })
+            setProducts(products)
+        }
+       getProducts()
+    }, [] )
 
     return (
         <div>
