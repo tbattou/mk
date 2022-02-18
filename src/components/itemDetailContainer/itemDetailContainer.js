@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ItemDetail } from '../itemDetail/itemDetail'
 import { useParams } from "react-router-dom";
-import { doc, getDocs} from 'firebase/firestore';
+import { doc, getDoc, collection} from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
 
 
@@ -11,12 +11,15 @@ export const ItemDetailContainer = () => {
     console.log(itemId)
 
     useEffect (() => {
-      const getProducts = async (itemId) => {
-          const productId = await getDocs(doc(db, 'productos', itemId))
-       
-          setItem(productId)
-      }
-     getProducts()
+      const prodcollection = collection(db, "productos")
+      const refDoc = doc(prodcollection, itemId)
+      getDoc(refDoc)
+      .then((resultado) => {
+          const id = resultado.id
+          const data = resultado.data()
+          const prod = { id:id, ...data}
+          setItem(prod)
+         })
   }, [] )
     
       return (

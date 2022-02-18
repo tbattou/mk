@@ -13,8 +13,8 @@ export const Cart = () => {
             items.map(product => {
                 return  (
                 <div>
-                    <h2 className="title">{product.title}</h2>
-                    <img className="image" src={product.image} alt="product image" />
+                    <h2 className="title">{product.name}</h2>
+                    <img className="image" src={product.imageUrl} alt="product image" />
                     <span className="data">
                     <p className="price">${product.price}</p>
                     <p className="price">{product.count}</p>

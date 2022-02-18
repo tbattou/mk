@@ -12,7 +12,9 @@ export const ItemListContainer = () => {
         const getProducts = async () => {
             const querySnapshot = await getDocs(collection(db, 'productos'))
             const products = querySnapshot.docs.map((doc) => {
+                const id = doc.id
                 return{
+                    id : id,
                     ...doc.data(),
                 }
             })
