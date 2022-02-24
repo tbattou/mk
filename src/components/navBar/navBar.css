@@ -24,6 +24,7 @@ body {
   padding: 20px;
   text-decoration: none;
   transition: all 0.7s;
+  font-weight: bold;
 }
 
 .menu ul li a:hover {

@@ -32,36 +32,37 @@ export const Cart = () => {
                     <h2 className="title">{product.name}</h2>
                     <img className="image" src={product.imageUrl} alt="product image" />
                     <span className="data">
-                    <p className="price">${product.price}</p>
+                    <p className="price">$ {product.price}</p>
                     <p className="price">{product.count}</p>
                     </span>
     
-                    <button onClick={() => removeItem({product, })}>Borrar Item</button>
+                    <button onClick={() => removeItem({product, })}>Borrar item</button>
                 </div>)
             })}
             </section>
             <p className="total">Cantidad de artículos: {cantidadTotal}</p>
-            <p className="total">Total $ {precioTotal}</p>
-            <button onClick={clearItems}>Vaciar Carrito</button>
+            <p className="total">Total a pagar $ {precioTotal}</p>
+            <button onClick={clearItems}>Vaciar carrito</button>
             <Link to="/">
             <button>Seguir comprando</button>
             </Link>
-            <section>
+            <section className="form">
+            <h3 className="important">¡IMPORTANTE!</h3>
             <p>Antes de finalizar la compra completá el siguiente formulario</p>
             <label>
-                Nombre
+                Nombre: 
             <input type="text" value={order.user} onChange={(e) => setOrder({ ...order, user: e.target.value})}></input>   
             </label>
             <label>
-                Telefono
+                Teléfono: 
             <input type="number" value={order.phone} onChange={(e) => setOrder({ ...order, phone: e.target.value})}></input>   
             </label>
             <label>
-                Dirección de email
+                Dirección de email: 
             <input type="email" value={order.email} onChange={(e) => setOrder({ ...order, email: e.target.value})}></input>   
             </label>
             <Link to="/">
-            <button onClick={() => createOrder(order)}>Finalizar Compra</button>
+            <button onClick={() => createOrder(order)}>Finalizar compra</button>
             </Link>
             </section>
             
