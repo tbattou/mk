@@ -17,9 +17,12 @@ export const Cart = () => {
 
     const createOrder = async (order) => {
         order.total = precioTotal
+        if (order.user.length === 0 || order.phone.length === 0 || order.email.length === 0) {
+            alert("Para finalizar la compra diríjase al carrito y complete todos los campos del formulario. Muchas gracias!")
+        } else {
         const createdOrder = await addDoc(collection(db, 'ordenes'), order)
         alert("Gracias por tu compra! " + order.user + ", el total a abonar es: $" + precioTotal + ". Una vez confirmado el pago estaremos enviando tus productos.")
-      clearItems()
+      clearItems() }
     }
 
     return (
