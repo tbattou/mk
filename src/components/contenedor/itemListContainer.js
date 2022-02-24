@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ItemList } from '../itemList/itemList';
 import { collection, getDocs} from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
+import "./itemListContainer.css";
 
 
 
@@ -24,7 +25,7 @@ export const ItemListContainer = () => {
     }, [] )
 
     return (
-        <div>
+        <div className="list">
             <ItemList products={products}/>
         </div>
 

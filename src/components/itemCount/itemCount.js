@@ -22,9 +22,7 @@ export const ItemCount = ({item, initial,}) => {
     
     
     return (
-    <div>
-      <h1>Contador carrito</h1>
-      
+    <div className="count">
       <button onClick={() => onDecrease()}> - </button>
       <h3> {count} </h3>
       <button onClick={() => onIncrease()}> + </button>

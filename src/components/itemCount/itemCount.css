@@ -2,3 +2,11 @@ h1,
 p {
   font-family: Lato;
 }
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  border-radius: 16px;
+  gap: 12px;
+}

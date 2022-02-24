@@ -1,0 +1,13 @@
+.list {
+  padding: 5rem;
+}
+
+.total {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: blue;
+  margin: 4px;
+  font-size: 30px;
+  color: white;
+  width: 30%;
+}

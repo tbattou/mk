@@ -3,6 +3,7 @@ import { ItemDetail } from '../itemDetail/itemDetail'
 import { useParams } from "react-router-dom";
 import { doc, getDoc, collection} from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
+import "../contenedor/itemListContainer.css";
 
 
 export const ItemDetailContainer = () => {
@@ -23,7 +24,7 @@ export const ItemDetailContainer = () => {
   }, [] )
     
       return (
-            <section className="products">
+            <section className="list">
               <h1 className="titleSection">📦 Productos detallados</h1>
               <ItemDetail item={item}/>
             </section>

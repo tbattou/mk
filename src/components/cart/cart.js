@@ -3,6 +3,7 @@ import { CartContext } from "../cartContext/cartContext";
 import { Link } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
+import "../contenedor/itemListContainer.css";
 
 export const Cart = () => {
     const {items, removeItem, clearItems, cantidadTotal, precioTotal} = useContext(CartContext)
@@ -22,11 +23,12 @@ export const Cart = () => {
     }
 
     return (
-        <div>
+        <div className="list">
+            <section className="itemlist">
             {
             items.map(product => {
                 return  (
-                <div>
+                <div className="product">
                     <h2 className="title">{product.name}</h2>
                     <img className="image" src={product.imageUrl} alt="product image" />
                     <span className="data">
@@ -37,8 +39,9 @@ export const Cart = () => {
                     <button onClick={() => removeItem({product, })}>Borrar Item</button>
                 </div>)
             })}
-            <p className="price">{cantidadTotal}</p>
-            <p className="price">${precioTotal}</p>
+            </section>
+            <p className="total">Cantidad de artículos: {cantidadTotal}</p>
+            <p className="total">Total $ {precioTotal}</p>
             <button onClick={clearItems}>Vaciar Carrito</button>
             <Link to="/">
             <button>Seguir comprando</button>

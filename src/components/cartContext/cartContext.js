@@ -53,11 +53,6 @@ export const CartProvider = ({ children }) => {
       setCantidadTotal(cantidadTotal - product.count);
     };
 
-    const checkoutItems = () => {
-      alert("Gracias por la compra")
-      clearItems()
-    };
 
-
-    return <CartContext.Provider value={{ addItem, items, removeItem, clearItems, checkoutItems, cantidadTotal, precioTotal}}>{children}</CartContext.Provider>
+    return <CartContext.Provider value={{ addItem, items, removeItem, clearItems,  cantidadTotal, precioTotal}}>{children}</CartContext.Provider>
 }
